@@ -4,8 +4,6 @@ cmake_minimum_required (VERSION 3.8)
 
 project ("image_crop")
 
-# путь к коревому каталогу буста (например: с:/boost)
-
 #set(Boost_NO_SYSTEM_PATHS ON)
 #set(BOOST_ROOT $ENV{BOOST_PATH})
 #set(BOOST_INCLUDEDIR ${BOOST_ROOT}/boost)
@@ -14,7 +12,6 @@ project ("image_crop")
 #set(boost_COMPONENTS
 #    "chrono" "regex" "thread"
 #)
-#set (Boost_DEBUG ON)
 
 find_package(Boost COMPONENTS ${boost_COMPONENTS} REQUIRED)
 IF (Boost_FOUND)
@@ -25,8 +22,4 @@ ENDIF()
 
 set(Boost_USE_STATIC_LIBS   ON)
 
-#ADD_DEFINITIONS(-DBOOST_ALL_DYN_LINK)
-
 add_executable (image_crop "image_crop.cpp")
-
-
